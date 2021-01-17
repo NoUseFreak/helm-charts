@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  assistant-relay:
+  - apiVersion: v2
+    appVersion: 3.2.0.1
+    created: "2021-01-17T01:13:44.927155349Z"
+    description: A Helm chart for Kubernetes
+    digest: 5fa51455c0d484c6e62a7b91e96dc3bea81f06fed021b5c06c6aa677ec84f8fb
+    name: assistant-relay
+    type: application
+    urls:
+    - https://github.com/NoUseFreak/helm-charts/releases/download/assistant-relay-0.1.0/assistant-relay-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-01-17T01:13:44.819873637Z"
