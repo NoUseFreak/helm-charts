@@ -25,6 +25,29 @@ entries:
     urls:
     - https://github.com/NoUseFreak/helm-charts/releases/download/assistant-relay-0.1.0/assistant-relay-0.1.0.tgz
     version: 0.1.0
+  huaweifusionsolar-exporter:
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2021-10-03T16:42:45.169140931Z"
+    description: Scrape and export huaweisolarfustion metrics
+    digest: 935c7ce48c18703e672e1af56e512d77c07ca8892c301aad018aad512a55f944
+    icon: https://eu5.fusionsolar.huawei.com/pvmswebsite/images/sm/login-logo.png
+    keywords:
+    - prometheus
+    - huawei
+    - fusionsolar
+    maintainers:
+    - email: dries@stenic.io
+      name: NoUseFreak
+      url: https://stenic.io
+    name: huaweifusionsolar-exporter
+    sources:
+    - https://github.com/nousefreak/helm-charts
+    - https://github.com/nousefreak/huaweifusionsolar-exporter
+    type: application
+    urls:
+    - https://github.com/NoUseFreak/helm-charts/releases/download/huaweifusionsolar-exporter-0.1.2/huaweifusionsolar-exporter-0.1.2.tgz
+    version: 0.1.2
   huaweisolarfusion-exporter:
   - apiVersion: v2
     appVersion: 1.0.1
