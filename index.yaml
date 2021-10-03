@@ -48,6 +48,35 @@ entries:
       artifacthub.io/license: Apache-2.0
     apiVersion: v2
     appVersion: 1.0.0
+    created: "2021-10-03T20:47:03.968085157Z"
+    description: Scrape and export huaweisolarfustion metrics
+    digest: 4bb280365a530f035bdaa166be69ffb13bf5c06372229c7126619622e6ecc213
+    home: https://github.com/NoUseFreak/helm-charts/tree/master/charts/huaweifusionsolar-exporter
+    icon: https://eu5.fusionsolar.huawei.com/pvmswebsite/images/sm/login-logo.png
+    keywords:
+    - prometheus
+    - huawei
+    - fusionsolar
+    maintainers:
+    - email: dries@stenic.io
+      name: NoUseFreak
+      url: https://stenic.io
+    name: huaweifusionsolar-exporter
+    sources:
+    - https://github.com/nousefreak/helm-charts
+    - https://github.com/nousefreak/huaweifusionsolar-exporter
+    type: application
+    urls:
+    - https://github.com/NoUseFreak/helm-charts/releases/download/huaweifusionsolar-exporter-0.1.6/huaweifusionsolar-exporter-0.1.6.tgz
+    version: 0.1.6
+  - annotations:
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/images: |
+        - name: huaweifusionsolar-exporter
+          image: ghcr.io/nousefreak/huaweifusionsolar-exporter
+      artifacthub.io/license: Apache-2.0
+    apiVersion: v2
+    appVersion: 1.0.0
     created: "2021-10-03T20:15:16.835506945Z"
     description: Scrape and export huaweisolarfustion metrics
     digest: 41b275023b7bae21d68da53ecb5c59ab5adf29ace0e79ab87217362a1d7ba25f
@@ -135,4 +164,4 @@ entries:
     urls:
     - https://github.com/NoUseFreak/helm-charts/releases/download/huaweifusionsolar-exporter-0.1.2/huaweifusionsolar-exporter-0.1.2.tgz
     version: 0.1.2
-generated: "2021-01-17T01:13:44.819873637Z"
+generated: "2021-10-03T20:47:03.968329257Z"
