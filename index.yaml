@@ -11,4 +11,15 @@ entries:
     urls:
     - https://github.com/NoUseFreak/helm-charts/releases/download/assistant-relay-0.1.0/assistant-relay-0.1.0.tgz
     version: 0.1.0
+  huaweisolarfusion-exporter:
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2021-10-03T11:54:15.727550567Z"
+    description: Scrape and export huaweisolarfustion metrics
+    digest: 4ac488f3a7e3fe607f8811a9d50fdeb6bd78ed16fb0c15c65964bf232870f5a1
+    name: huaweisolarfusion-exporter
+    type: application
+    urls:
+    - https://github.com/NoUseFreak/helm-charts/releases/download/huaweisolarfusion-exporter-0.1.0/huaweisolarfusion-exporter-0.1.0.tgz
+    version: 0.1.0
 generated: "2021-01-17T01:13:44.819873637Z"
