@@ -1,10 +1,10 @@
-# huaweisolarfusion-exporter
+# huaweifusionsolar-exporter
 
 ## TL;DR;
 
 ```console
 helm repo add nousefreak https://nousefreak.github.io/helm-charts
-helm install my-release nousefreak/huaweisolarfusion-exporter
+helm install my-release nousefreak/huaweifusionsolar-exporter
 ```
 
 ## Introduction
@@ -22,10 +22,10 @@ To install the chart with the release name `my-release`:
 
 ```console
 helm repo add stenic https://nousefreak.github.io/helm-charts
-helm install my-release stenic/huaweisolarfusion-exporter
+helm install my-release stenic/huaweifusionsolar-exporter
 ```
 
-These commands deploy huaweisolarfusion-exporter on the Kubernetes cluster in the default configuration. The [Parameters](#parameters) section lists the parameters that can be configured during installation.
+These commands deploy huaweifusionsolar-exporter on the Kubernetes cluster in the default configuration. The [Parameters](#parameters) section lists the parameters that can be configured during installation.
 
 > **Tip**: List all releases using `helm list`
 
@@ -41,16 +41,17 @@ The command removes all the Kubernetes components associated with the chart and 
 
 ## Configuration
 
-The following tables list the configurable parameters of the huaweisolarfusion-exporter chart and their default values.
+The following tables list the configurable parameters of the huaweifusionsolar-exporter chart and their default values.
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
 | fullnameOverride | string | `""` |  |
-| hsfe.password | string | `""` |  |
-| hsfe.username | string | `""` |  |
+| hfse.apiEndpoint | string | `""` |  |
+| hfse.password | string | `""` |  |
+| hfse.username | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"ghcr.io/nousefreak/huawaisolar-exporter"` |  |
+| image.repository | string | `"ghcr.io/nousefreak/huaweifusionsolar-exporter"` |  |
 | image.tag | string | `""` |  |
 | imagePullSecrets[0].name | string | `"awsecr-cred"` |  |
 | nameOverride | string | `""` |  |
@@ -74,5 +75,5 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```console
-helm install my-release -f values.yaml stenic/huaweisolarfusion-exporter
+helm install my-release -f values.yaml stenic/huaweifusionsolar-exporter
 ```
