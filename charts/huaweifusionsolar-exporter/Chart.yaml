@@ -2,7 +2,7 @@ apiVersion: v2
 name: huaweifusionsolar-exporter
 description: Scrape and export huaweisolarfustion metrics
 type: application
-version: 0.1.4
+version: 0.1.5
 appVersion: 1.0.0
 icon: https://eu5.fusionsolar.huawei.com/pvmswebsite/images/sm/login-logo.png
 maintainers:
@@ -13,6 +13,14 @@ keywords:
   - prometheus
   - huawei
   - fusionsolar
+home: https://github.com/NoUseFreak/helm-charts/tree/master/charts/huaweifusionsolar-exporter
 sources:
   - https://github.com/nousefreak/helm-charts
   - https://github.com/nousefreak/huaweifusionsolar-exporter
+deprecated: false
+annotations:
+  artifacthub.io/license: Apache-2.0
+  artifacthub.io/containsSecurityUpdates: "true"
+  artifacthub.io/images: |
+    - name: huaweifusionsolar-exporter
+      image: ghcr.io/nousefreak/huaweifusionsolar-exporter

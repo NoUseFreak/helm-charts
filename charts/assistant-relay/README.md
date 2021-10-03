@@ -21,8 +21,8 @@ https://github.com/greghesp/assistant-relay
 To install the chart with the release name `my-release`:
 
 ```console
-helm repo add stenic https://nousefreak.github.io/helm-charts
-helm install my-release stenic/assistant-relay
+helm repo add nousefreak https://nousefreak.github.io/helm-charts
+helm install my-release nousefreak/assistant-relay
 ```
 
 These commands deploy assistant-relay on the Kubernetes cluster in the default configuration. The [Parameters](#parameters) section lists the parameters that can be configured during installation.
@@ -78,5 +78,5 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```console
-helm install my-release -f values.yaml stenic/assistant-relay
+helm install my-release -f values.yaml nousefreak/assistant-relay
 ```
