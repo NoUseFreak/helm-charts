@@ -2,8 +2,8 @@ apiVersion: v2
 name: huaweifusionsolar-exporter
 description: Scrape and export huaweisolarfustion metrics
 type: application
-version: 0.1.2
-appVersion: 1.0.1
+version: 0.1.3
+appVersion: 1.0.0
 icon: https://eu5.fusionsolar.huawei.com/pvmswebsite/images/sm/login-logo.png
 maintainers:
   - name: NoUseFreak

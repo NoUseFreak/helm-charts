@@ -9,7 +9,7 @@ hfse:
 
 replicaCount: 1
 image:
-  repository: ghcr.io/nousefreak/huawaisolar-exporter
+  repository: ghcr.io/nousefreak/huaweifusionsolar-exporter
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
