@@ -5,7 +5,7 @@
 hsfe:
   username: ""
   password: ""
-  # apiEndpoint: 
+  # apiEndpoint:
 
 replicaCount: 1
 image:
