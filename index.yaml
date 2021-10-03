@@ -3,6 +3,20 @@ entries:
   assistant-relay:
   - apiVersion: v2
     appVersion: 3.2.0.1
+    created: "2021-10-03T20:15:16.731882488Z"
+    description: A Helm chart for Kubernetes
+    digest: 9eff85ebbc49e2eb6e6ae6a0457da5815e4ad375af44bbb91359abfa6175c9bd
+    maintainers:
+    - email: dries@stenic.io
+      name: NoUseFreak
+      url: https://stenic.io
+    name: assistant-relay
+    type: application
+    urls:
+    - https://github.com/NoUseFreak/helm-charts/releases/download/assistant-relay-0.1.2/assistant-relay-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 3.2.0.1
     created: "2021-10-03T16:15:25.579853762Z"
     description: A Helm chart for Kubernetes
     digest: d9e93c25b187af51afe6b68620dff6440667425955c09664b433e155d84cc662
@@ -26,6 +40,35 @@ entries:
     - https://github.com/NoUseFreak/helm-charts/releases/download/assistant-relay-0.1.0/assistant-relay-0.1.0.tgz
     version: 0.1.0
   huaweifusionsolar-exporter:
+  - annotations:
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/images: |
+        - name: huaweifusionsolar-exporter
+          image: ghcr.io/nousefreak/huaweifusionsolar-exporter
+      artifacthub.io/license: Apache-2.0
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-10-03T20:15:16.835506945Z"
+    description: Scrape and export huaweisolarfustion metrics
+    digest: 41b275023b7bae21d68da53ecb5c59ab5adf29ace0e79ab87217362a1d7ba25f
+    home: https://github.com/NoUseFreak/helm-charts/tree/master/charts/huaweifusionsolar-exporter
+    icon: https://eu5.fusionsolar.huawei.com/pvmswebsite/images/sm/login-logo.png
+    keywords:
+    - prometheus
+    - huawei
+    - fusionsolar
+    maintainers:
+    - email: dries@stenic.io
+      name: NoUseFreak
+      url: https://stenic.io
+    name: huaweifusionsolar-exporter
+    sources:
+    - https://github.com/nousefreak/helm-charts
+    - https://github.com/nousefreak/huaweifusionsolar-exporter
+    type: application
+    urls:
+    - https://github.com/NoUseFreak/helm-charts/releases/download/huaweifusionsolar-exporter-0.1.5/huaweifusionsolar-exporter-0.1.5.tgz
+    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2021-10-03T19:14:39.157466379Z"
