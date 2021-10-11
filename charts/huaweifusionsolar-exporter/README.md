@@ -9,8 +9,8 @@ helm install my-release nousefreak/huaweifusionsolar-exporter
 
 ## Introduction
 
-https://github.com/NoUseFreak/huawaisolar-exporter
-https://github.com/NoUseFreak/helm-charts
+- https://github.com/NoUseFreak/huawaisolar-exporter
+- https://github.com/NoUseFreak/helm-charts
 
 ## Prerequisites
 
