@@ -1,0 +1,9 @@
+config: |
+  timeout: 60
+  spec:
+  - type: aws-route53
+    domain: myip.example.com
+    options:
+      AWS_ACCESS_KEY_ID: AKIAXXXXXXXXXXXXXXXX
+      AWS_SECRET_ACCESS_KEY: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      zoneId: XXXXXXXXXXXXXXXXXXXX
