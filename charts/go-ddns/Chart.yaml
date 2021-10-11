@@ -1,0 +1,25 @@
+apiVersion: v2
+name: go-ddns
+description: Update a dns record of your external ip
+type: application
+version: 0.1.0
+appVersion: 1.0.0
+maintainers:
+  - name: NoUseFreak
+    email: dries@stenic.io
+    url: https://stenic.io
+keywords:
+  - dynamic dns
+  - ddns
+  - route53
+home: https://github.com/NoUseFreak/helm-charts/tree/master/charts/go-ddns
+sources:
+  - https://github.com/nousefreak/helm-charts
+  - https://github.com/nousefreak/go-ddns
+deprecated: false
+annotations:
+  artifacthub.io/license: Apache-2.0
+  artifacthub.io/containsSecurityUpdates: "true"
+  artifacthub.io/images: |
+    - name: go-ddns
+      image: ghcr.io/nousefreak/go-ddns
