@@ -39,7 +39,65 @@ entries:
     urls:
     - https://github.com/NoUseFreak/helm-charts/releases/download/assistant-relay-0.1.0/assistant-relay-0.1.0.tgz
     version: 0.1.0
+  go-ddns:
+  - annotations:
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/images: |
+        - name: go-ddns
+          image: ghcr.io/nousefreak/go-ddns
+      artifacthub.io/license: Apache-2.0
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-10-11T17:41:58.639798594Z"
+    description: Update a dns record of your external ip
+    digest: 75d5c36822eb44fd69d9cf2e551667a729b5db1638e9b69dadc2f665c88faf12
+    home: https://github.com/NoUseFreak/helm-charts/tree/master/charts/go-ddns
+    keywords:
+    - dynamic dns
+    - ddns
+    - route53
+    maintainers:
+    - email: dries@stenic.io
+      name: NoUseFreak
+      url: https://stenic.io
+    name: go-ddns
+    sources:
+    - https://github.com/nousefreak/helm-charts
+    - https://github.com/nousefreak/go-ddns
+    type: application
+    urls:
+    - https://github.com/NoUseFreak/helm-charts/releases/download/go-ddns-0.1.0/go-ddns-0.1.0.tgz
+    version: 0.1.0
   huaweifusionsolar-exporter:
+  - annotations:
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/images: |
+        - name: huaweifusionsolar-exporter
+          image: ghcr.io/nousefreak/huaweifusionsolar-exporter
+      artifacthub.io/license: Apache-2.0
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-10-11T17:41:58.731498732Z"
+    description: Scrape and export huaweisolarfustion metrics
+    digest: 2956813cfab6f5794599c384d8c1e0f9feb104c82f9f7edddc9366ff59f6b106
+    home: https://github.com/NoUseFreak/helm-charts/tree/master/charts/huaweifusionsolar-exporter
+    icon: https://eu5.fusionsolar.huawei.com/pvmswebsite/images/sm/login-logo.png
+    keywords:
+    - prometheus
+    - huawei
+    - fusionsolar
+    maintainers:
+    - email: dries@stenic.io
+      name: NoUseFreak
+      url: https://stenic.io
+    name: huaweifusionsolar-exporter
+    sources:
+    - https://github.com/nousefreak/helm-charts
+    - https://github.com/nousefreak/huaweifusionsolar-exporter
+    type: application
+    urls:
+    - https://github.com/NoUseFreak/helm-charts/releases/download/huaweifusionsolar-exporter-0.1.7/huaweifusionsolar-exporter-0.1.7.tgz
+    version: 0.1.7
   - annotations:
       artifacthub.io/containsSecurityUpdates: "true"
       artifacthub.io/images: |
@@ -164,4 +222,4 @@ entries:
     urls:
     - https://github.com/NoUseFreak/helm-charts/releases/download/huaweifusionsolar-exporter-0.1.2/huaweifusionsolar-exporter-0.1.2.tgz
     version: 0.1.2
-generated: "2021-10-03T20:47:03.968329257Z"
+generated: "2021-10-11T17:41:58.731526133Z"
