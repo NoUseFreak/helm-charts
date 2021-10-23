@@ -2,8 +2,8 @@ apiVersion: v2
 name: clusterfan
 description: Control a PWM fan based on node temps
 type: application
-version: 0.1.0
-appVersion: 1.16.0
+version: 0.1.1
+appVersion: v0.1.0
 maintainers:
   - name: NoUseFreak
     email: dries@stenic.io
