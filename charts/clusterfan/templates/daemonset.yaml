@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: {{ include "clusterfan.fullname" . }}
+  labels:
+    {{- include "clusterfan.labels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "clusterfan.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "clusterfan.selectorLabels" . | nindent 8 }}
+    spec:
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        effect: NoSchedule
+      containers:
+      - name: {{ .Chart.Name }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+        imagePullPolicy: Always
+        env:
+        - name: CLUSTERFAN_MASTERURL
+          value: http://{{ include "clusterfan.fullname" . }}-master
+        resources:
+          limits:
+            memory: 20Mi
+            cpu: 50m
+          requests:
+            cpu: 30m
+            memory: 20Mi
+      terminationGracePeriodSeconds: 30
