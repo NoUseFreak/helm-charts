@@ -41,6 +41,20 @@ entries:
     version: 0.1.0
   clusterfan:
   - apiVersion: v2
+    appVersion: v0.1.0
+    created: "2021-10-23T13:02:34.090899588Z"
+    description: Control a PWM fan based on node temps
+    digest: 453e29c66a913fc8ccbdc1aeae80324cbdec9ac0462ddb765a84ba7b46b98b6e
+    maintainers:
+    - email: dries@stenic.io
+      name: NoUseFreak
+      url: https://stenic.io
+    name: clusterfan
+    type: application
+    urls:
+    - https://github.com/NoUseFreak/helm-charts/releases/download/clusterfan-0.1.1/clusterfan-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2021-10-23T12:45:22.002046223Z"
     description: Control a PWM fan based on node temps
@@ -237,4 +251,4 @@ entries:
     urls:
     - https://github.com/NoUseFreak/helm-charts/releases/download/huaweifusionsolar-exporter-0.1.2/huaweifusionsolar-exporter-0.1.2.tgz
     version: 0.1.2
-generated: "2021-10-23T12:45:22.002113424Z"
+generated: "2021-10-23T13:02:34.090923188Z"
