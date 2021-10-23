@@ -3,8 +3,8 @@
 # Declare variables to be passed into your templates.
 
 image:
-  repository: nousefreak/clusterfan
-  tag: "v0.0.15"
+  repository: ghcr.io/nousefreak/clusterfan
+  tag:
 
 pwm:
   hostname: "kmaster"
