@@ -1,0 +1,60 @@
+{{- range $name, $svc := .Values.services -}}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "docker-compose.fullname" $ }}-{{ $name }}
+  labels:
+    {{- include "docker-compose.labels" $ | nindent 4 }}
+    docker-compose/service: {{ $name }}
+spec:
+  replicas: {{ ($svc.deploy).replicas | default 1 }}
+  selector:
+    matchLabels:
+      {{- include "docker-compose.selectorLabels" $ | nindent 6 }}
+      docker-compose/service: {{ $name }}
+  template:
+    metadata:
+      labels:
+        {{- include "docker-compose.selectorLabels" $ | nindent 8 }}
+        docker-compose/service: {{ $name }}
+      annotations:
+        checksum/environment: {{ $svc.environment | toJson | sha256sum }}
+    spec:
+      serviceAccountName: {{ include "docker-compose.serviceAccountName" $ }}
+      containers:
+        - name: {{ default $name $svc.container_name }}
+          image: "{{ $svc.image }}"
+          envFrom:
+            - secretRef:
+                name: {{ include "docker-compose.fullname" $ }}-env-{{ $name }}
+          ports:
+          {{- with $svc.ports }}
+            {{- range $idx, $port := $svc.ports }}
+            - name: port-{{ $idx }}
+              containerPort: {{ (split ":" $port)._1 }}
+              protocol: TCP
+            {{- end }}
+          {{- end }}
+          {{- with $svc.expose }}
+            {{- range $idx, $port := $svc.expose }}
+            - name: expose-{{ $idx }}
+              containerPort: {{ $port }}
+              protocol: TCP
+            {{- end }}
+          {{- end }}
+          {{- with $svc.volumes }}
+          volumeMounts:
+            {{- range $idx, $vol := $svc.volumes }}
+            - mountPath: {{ (split ":" $vol)._1 }}
+              name: vol-{{ $idx }}
+            {{- end }}
+          {{- end }}
+      {{- with $svc.volumes }}
+      volumes:
+        {{- range $idx, $vol := $svc.volumes }}
+        - name: vol-{{ $idx }}
+          emptyDir: {}
+        {{- end }}
+      {{- end }}
+{{ end -}}
