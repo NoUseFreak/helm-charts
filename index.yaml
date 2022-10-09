@@ -42,6 +42,20 @@ entries:
   clusterfan:
   - apiVersion: v2
     appVersion: v0.1.0
+    created: "2022-10-09T22:47:06.044125218Z"
+    description: Control a PWM fan based on node temps
+    digest: 2729286b9fab718c5a1103827c99a2d0cc5d03d8a8c1097d5bdb588cef4e9029
+    maintainers:
+    - email: dries@stenic.io
+      name: NoUseFreak
+      url: https://stenic.io
+    name: clusterfan
+    type: application
+    urls:
+    - https://github.com/NoUseFreak/helm-charts/releases/download/clusterfan-0.1.2/clusterfan-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: v0.1.0
     created: "2021-10-23T13:02:34.090899588Z"
     description: Control a PWM fan based on node temps
     digest: 453e29c66a913fc8ccbdc1aeae80324cbdec9ac0462ddb765a84ba7b46b98b6e
@@ -96,6 +110,20 @@ entries:
     type: application
     urls:
     - https://github.com/NoUseFreak/helm-charts/releases/download/go-ddns-0.1.0/go-ddns-0.1.0.tgz
+    version: 0.1.0
+  helm-compose:
+  - apiVersion: v2
+    created: "2022-10-09T22:47:06.268919538Z"
+    description: Docker compose for Kubernetes
+    digest: 595369902919485a020d2ce2fbfcf15b445e23f37a2c07b1ed751bbd855cb840
+    maintainers:
+    - email: dries@stenic.io
+      name: NoUseFreak
+      url: https://stenic.io
+    name: helm-compose
+    type: application
+    urls:
+    - https://github.com/NoUseFreak/helm-charts/releases/download/helm-compose-0.1.0/helm-compose-0.1.0.tgz
     version: 0.1.0
   huaweifusionsolar-exporter:
   - annotations:
@@ -251,4 +279,4 @@ entries:
     urls:
     - https://github.com/NoUseFreak/helm-charts/releases/download/huaweifusionsolar-exporter-0.1.2/huaweifusionsolar-exporter-0.1.2.tgz
     version: 0.1.2
-generated: "2021-10-23T13:02:34.090923188Z"
+generated: "2022-10-09T22:47:06.268947839Z"
