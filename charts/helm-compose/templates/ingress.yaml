@@ -1,0 +1,29 @@
+{{- range $name, $svc := .Values.services -}}
+{{ with $svc.labels }}
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "docker-compose.fullname" $ }}-{{ $name }}
+  labels:
+    {{- include "docker-compose.labels" $ | nindent 4 }}
+    docker-compose/service: {{ $name }}
+spec:
+  ingressClassName: {{ index $svc.labels "hdc.ingress.class" }}
+  rules:
+  - host: {{ index $svc.labels "hdc.ingress.host" }}
+    http:
+      paths:
+      - backend:
+          service:
+            name: {{ include "docker-compose.serviceName" $name }}
+            port:
+              {{ with index $svc.labels "hdc.ingress.port" -}}
+              number: {{ . }}
+              {{ else -}}
+              name: port-0
+              {{- end }}
+        path: {{ index $svc.labels "hdc.ingress.path" | default "/" }}
+        pathType: ImplementationSpecific
+{{ end -}}
+{{ end -}}

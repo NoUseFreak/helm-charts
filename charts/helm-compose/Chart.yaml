@@ -1,9 +1,8 @@
 apiVersion: v2
-name: clusterfan
-description: Control a PWM fan based on node temps
+name: helm-compose
+description: Docker compose for Kubernetes
 type: application
-version: 0.1.2
-appVersion: v0.1.0
+version: 0.1.0
 maintainers:
   - name: NoUseFreak
     email: dries@stenic.io
