@@ -1,0 +1,3 @@
+{{- if eq (semverCompare "^3" .Values.version) false -}}
+{{ fail "Only version 3 is supported" }}
+{{- end }}
