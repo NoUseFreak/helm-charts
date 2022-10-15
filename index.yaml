@@ -113,6 +113,19 @@ entries:
     version: 0.1.0
   helm-compose:
   - apiVersion: v2
+    created: "2022-10-15T16:01:22.34611526Z"
+    description: Docker compose for Kubernetes
+    digest: 1bf40d3771aa82c118a98205be2ffa7ab4c37af7c61cd58dc1a1ae59b468ad65
+    maintainers:
+    - email: dries@stenic.io
+      name: NoUseFreak
+      url: https://stenic.io
+    name: helm-compose
+    type: application
+    urls:
+    - https://github.com/NoUseFreak/helm-charts/releases/download/helm-compose-0.1.3/helm-compose-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
     created: "2022-10-15T15:54:43.386277826Z"
     description: Docker compose for Kubernetes
     digest: 4522b0cebe39e7d1762268c6dfb5a390b28329b9bdc1a3b19a1795ce945893ff
@@ -305,4 +318,4 @@ entries:
     urls:
     - https://github.com/NoUseFreak/helm-charts/releases/download/huaweifusionsolar-exporter-0.1.2/huaweifusionsolar-exporter-0.1.2.tgz
     version: 0.1.2
-generated: "2022-10-15T15:54:43.386325227Z"
+generated: "2022-10-15T16:01:22.34614946Z"
