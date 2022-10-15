@@ -1,0 +1,15 @@
+{{- range $name, $vol := .Values.volumes -}}
+{{ $vol = $vol | default dict}}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "docker-compose.fullname" $ }}-{{ $name | kebabcase }}
+spec:
+  storageClassName: {{ index ($vol.labels | default dict) "hdc.volume.storageclass" | default "" | quote }}
+  accessModes:
+    - {{ index ($vol.labels | default dict) "hdc.volume.accessmodes" | default "ReadWriteOnce" | quote }}
+  resources:
+    requests:
+      storage: {{ index ($vol.labels | default dict) "hdc.volume.request.storage" | default "8Gi" | quote }}
+{{ end }}

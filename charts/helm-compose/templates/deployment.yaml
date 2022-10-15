@@ -3,21 +3,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "docker-compose.fullname" $ }}-{{ $name }}
+  name: {{ include "docker-compose.fullname" $ }}-{{ $name | kebabcase }}
   labels:
     {{- include "docker-compose.labels" $ | nindent 4 }}
-    docker-compose/service: {{ $name }}
+    docker-compose/service: {{ $name | kebabcase }}
 spec:
   replicas: {{ ($svc.deploy).replicas | default 1 }}
   selector:
     matchLabels:
       {{- include "docker-compose.selectorLabels" $ | nindent 6 }}
-      docker-compose/service: {{ $name }}
+      docker-compose/service: {{ $name | kebabcase }}
   template:
     metadata:
       labels:
         {{- include "docker-compose.selectorLabels" $ | nindent 8 }}
-        docker-compose/service: {{ $name }}
+        docker-compose/service: {{ $name | kebabcase }}
       annotations:
         checksum/environment: {{ $svc.environment | toJson | sha256sum }}
     spec:
@@ -27,7 +27,7 @@ spec:
           image: "{{ $svc.image }}"
           envFrom:
             - secretRef:
-                name: {{ include "docker-compose.fullname" $ }}-env-{{ $name }}
+                name: {{ include "docker-compose.fullname" $ }}-env-{{ $name | kebabcase }}
           ports:
           {{- with $svc.ports }}
             {{- range $idx, $port := $svc.ports }}
@@ -54,7 +54,12 @@ spec:
       volumes:
         {{- range $idx, $vol := $svc.volumes }}
         - name: vol-{{ $idx }}
+          {{ if index $.Values.volumes (split ":" $vol)._0 }}
+          persistentVolumeClaim:
+            claimName: {{ include "docker-compose.fullname" $ }}-{{ (split ":" $vol)._0 }}
+          {{ else }}
           emptyDir: {}
+          {{ end }}
         {{- end }}
       {{- end }}
 {{ end -}}

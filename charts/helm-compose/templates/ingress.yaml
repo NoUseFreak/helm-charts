@@ -4,10 +4,10 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ include "docker-compose.fullname" $ }}-{{ $name }}
+  name: {{ include "docker-compose.fullname" $ }}-{{ $name | kebabcase }}
   labels:
     {{- include "docker-compose.labels" $ | nindent 4 }}
-    docker-compose/service: {{ $name }}
+    docker-compose/service: {{ $name | kebabcase }}
 spec:
   ingressClassName: {{ index $svc.labels "hdc.ingress.class" }}
   rules:
